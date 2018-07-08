@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group
+        android:id="@+id/menu_top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/reload"
+
+            android:title="Обновить расписание" />
+        <item
+            android:id="@+id/addGroup"
+
+            android:title="Добавить класс" />
+        <item
+            android:id="@+id/showTimeTable"
+
+            android:title="Расписание" />
+
+    </group>
+
+    <group
+        android:id="@+id/menu_bottom"
+        android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/sendFeedback"
+            android:title="Отправить отзыв" />
+        <item
+            android:id="@+id/about"
+            android:title="О нас" />
+
+    </group>
+
+</menu>
