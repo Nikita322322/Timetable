@@ -1,22 +1,30 @@
 package com.example.user.timetable;
 
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
+
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
+    TabLayout tabLayout;
+    ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         configureToolbar();
+
     }
+
 
     private void configureToolbar() {
         Toolbar toolbar = findViewById(R.id.my_toolbar);
@@ -47,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
                             .replace(R.id.fragmentMainLay, new TimeTableFragment())
                             .commit();
                     drawerLayout.closeDrawers();
+
                 }
                 return true;
             }
