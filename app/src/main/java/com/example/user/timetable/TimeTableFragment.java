@@ -34,23 +34,6 @@ public class TimeTableFragment extends Fragment {
         binding.viewpager.setAdapter(new PagerAdapter(getFragmentManager(), binding.tabs.getTabCount()));
         binding.viewpager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(binding.tabs));
         binding.tabs.setupWithViewPager(binding.viewpager);
-        binding.tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
-            @Override
-            public void onTabSelected(TabLayout.Tab tab) {
-                Toast toast = Toast.makeText(getActivity(), String.valueOf(tab.getPosition()), Toast.LENGTH_LONG);
-                toast.show();
-            }
-
-            @Override
-            public void onTabUnselected(TabLayout.Tab tab) {
-
-            }
-
-            @Override
-            public void onTabReselected(TabLayout.Tab tab) {
-
-            }
-        });
         return binding.getRoot();
     }
 

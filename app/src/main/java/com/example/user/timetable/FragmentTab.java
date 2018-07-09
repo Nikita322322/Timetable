@@ -26,16 +26,8 @@ public class FragmentTab extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         binding = FragmentTabBinding.inflate(inflater, container, false);
-        String[] values = new String[]{"Android List View",
-                "Android Example",
-                "List View Source Code",
-                "List View Array Adapter",
-        };
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(),
-                android.R.layout.simple_list_item_1, android.R.id.text1, values);
-
-
-        binding.listView.setAdapter(adapter);
+        TimetableAdapter timetableAdapter = new TimetableAdapter(getContext());
+        binding.listView.setAdapter(timetableAdapter);
         return binding.getRoot();
     }
 
